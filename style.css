@@ -1,0 +1,140 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+:root {
+  --violet: hsl(257, 40%, 49%);
+  --softMagenta: hsl(300, 69%, 71%);
+  --sanFont: "Open Sans", sans-serif;
+  --popFont: "Poppins", sans-serif;
+}
+body {
+  height: 100vh;
+  background-image: url(images/bg-desktop.svg);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-color: var(--violet);
+}
+.container {
+  width: 100%;
+  height: 100vh;
+  padding: 25px 30px 60px 65px;
+}
+.logo {
+  width: 180px;
+}
+.content {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding-top: 40px;
+  width: 100%;
+}
+.left-side {
+  flex-basis: 55%;
+}
+.illustration-img {
+  width: 90%;
+}
+.right-side {
+  flex-basis: 45%;
+  padding: 35px 70px 120px 5px;
+}
+.right-side h1 {
+  font-family: var(--popFont);
+  font-weight: 600;
+  color: #fff;
+}
+.right-side h5 {
+  font-family: var(--popFont);
+  font-weight: 400;
+  font-size: 16px;
+  color: #dfdfdf;
+  padding: 30px 0 20px 0;
+}
+.right-side button {
+  width: 160px;
+  height: 40px;
+  border: none;
+  outline: none;
+  text-align: center;
+  border-radius: 30px;
+  font-size: 16px;
+  color: #9789bd;
+  cursor: pointer;
+  transition: 0.1s;
+}
+.right-side button:hover {
+  background-color: var(--softMagenta);
+  color: #fff;
+}
+.footer {
+  display: flex;
+  align-items: flex-end;
+  justify-content: end;
+  margin-right: 55px;
+  margin-bottom: 75px;
+  text-align: center;
+}
+.footer a {
+  text-decoration: none;
+  text-align: center;
+  cursor: pointer;
+}
+.footer a .fa {
+  width: 35px;
+  padding: 10px;
+  margin-right: 15px;
+  border-radius: 50%;
+  border: 1px solid white;
+  text-align: center;
+  color: #fff;
+}
+.footer a .fa:hover {
+  border: 1px solid var(--softMagenta);
+  color: var(--softMagenta);
+}
+
+/* media query */
+
+@media screen and (max-width: 375px) {
+  body {
+    background-image: url(images/bg-mobile.svg);
+    background-position: center;
+    background-size: contain;
+  }
+  .container {
+    padding: 20px 10px 60px 25px;
+  }
+  .logo {
+    width: 140px;
+  }
+  .content {
+    flex-direction: column;
+    width: 100%;
+  }
+  .left-side {
+    flex-basis: 100%;
+  }
+  .right-side {
+    flex-basis: 100%;
+    text-align: center;
+  }
+  .right-side h1 {
+    font-size: 22px;
+  }
+  .right-side h5 {
+    font-size: 13px;
+  }
+  .right-side button {
+    width: 190px;
+  }
+  .footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 50px;
+  }
+}
